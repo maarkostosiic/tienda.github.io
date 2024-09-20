@@ -1,0 +1,245 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f0f5;
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 0 15px; 
+
+header {
+    background: linear-gradient(135deg, black 0%, green 100%);
+    color: white;
+    padding: 40px;
+    text-align: center;
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+}
+
+header h1 {
+    font-size: 3rem;
+    letter-spacing: 1.5px;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+/* Secciones de contenido */
+section {
+    margin: 40px auto;
+    padding: 30px;
+    max-width: 1000px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+}
+
+
+.imagenes {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.imagenes img {
+    width: 32%;
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.imagenes img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+
+ul {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 15px;
+}
+
+ul li {
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: green;
+    color: white;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+ul li:hover {
+    background-color: #9BCD65;
+}
+
+
+.precio p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #9BCD65;
+}
+
+.precio p strong {
+    font-size: 2rem;
+    color: #9BCD65;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+form input {
+    padding: 12px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+form input:focus {
+    border-color: #9BCD65;
+    box-shadow: 0 4px 12px rgba(255, 111, 97, 0.2);
+    outline: none;
+}
+
+
+button {
+    padding: 15px;
+    background-color: green;
+    color: white;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #9BCD65;
+    transform: scale(1.05);
+}
+
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #9BCD65;
+    color: white;
+    margin-top: auto;
+}
+
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+header, section, footer {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+
+@media (max-width: 768px) {
+    .imagenes {
+        flex-direction: column;
+    }
+
+    .imagenes img {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    section {
+        padding: 20px;
+    }
+    
+    ul li {
+        padding: 8px;
+        font-size: 0.9rem;
+    }
+
+    .precio p {
+        font-size: 1.3rem;
+    }
+
+    .precio p strong {
+        font-size: 1.8rem;
+    }
+}
+
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 0.9rem;
+    }
+
+    .imagenes img {
+        width: 100%;
+    }
+
+    section {
+        padding: 15px;
+        margin: 20px auto;
+    }
+
+    ul li {
+        font-size: 0.8rem;
+        padding: 6px;
+    }
+
+    .precio p {
+        font-size: 1.2rem;
+    }
+
+    .precio p strong {
+        font-size: 1.6rem;
+    }
+
+    button {
+        font-size: 1rem;
+        padding: 12px;
+    }
+}
